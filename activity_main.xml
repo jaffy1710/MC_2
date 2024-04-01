@@ -1,0 +1,63 @@
+<!-- activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+    android:theme="@style/AppTheme">
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Date (YYYY-MM-DD)"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/yearEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/dateEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Year"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/cityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/yearEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Enter City Name" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/countryEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_below="@id/cityEditText"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:hint="Enter Country Code" />-->
+
+    <Button
+        android:id="@+id/buttonGetWeather"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/cityEditText"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="getWeather"
+        android:text="Get Weather" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonGetWeather"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="18sp"
+        tools:ignore="UnknownId" />
+
+</RelativeLayout>
